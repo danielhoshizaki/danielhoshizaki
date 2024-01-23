@@ -57,7 +57,7 @@ main {
 }
 
 .inner {
-  max-width: $xlarge;
+  max-width: $large;
 }
 
 /*
@@ -186,12 +186,3 @@ main {
     }
   }
 }
-
-#map {
-
-    height: 512px;
-
-    @include breakpoint($large) {
-      height: 800px;
-    }
-  }
