@@ -1,6 +1,6 @@
 {% for post in paginator.posts %}
   
-  {% if post.pin == false %}
+  {% if post.pin != true %}
     {% include entry.html %}
   {% endif %}
 
