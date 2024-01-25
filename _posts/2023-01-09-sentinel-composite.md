@@ -1,6 +1,6 @@
 ---
 layout: map
-title: "Global Satellite Composite"
+title: "Hassle Free and Cloud Free Sentinel-2 Imagery"
 name:  "Daniel Hoshizaki"
 image:
   path: /assets/images/portfolio/kyushu.png
