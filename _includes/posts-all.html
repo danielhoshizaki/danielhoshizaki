@@ -1,3 +1,13 @@
+
+          <header class="section-title">
+            <h2>Pinned Post</h2>
+            {% for post in site.posts %}
+              {% if post.pin == true %}
+                {% include entry.html %}
+              {% endif %}
+            {% endfor %}
+          </header>
+
 {% for post in site.posts %}
   {% include entry.html %}
 {% endfor %}
