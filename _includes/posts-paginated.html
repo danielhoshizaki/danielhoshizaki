@@ -1,5 +1,9 @@
 {% for post in paginator.posts %}
-  {% include entry.html %}
+  
+  {% if post.pin == false %}
+    {% include entry.html %}
+  {% endif %}
+
 {% endfor %}
 
 <!-- Pagination links -->
