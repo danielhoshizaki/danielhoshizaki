@@ -9,8 +9,7 @@ categories: [Remote Sensing, Deep Learning]
 pin: true
 ---
 
-Given enough data and compute budget, there's a sure-fire way to remove all cloud cover from Sentinel-2 satellite imagery. By enough data, I mean a whopping 5 years worth of imagery.
-It's fairly overkill, to put it mildly, but it works: everytime, everywhere.
+Given enough data and compute budget, there's a sure-fire way to remove all cloud cover from Sentinel-2 satellite imagery. By enough data, I mean a whopping 5 years worth of imagery. It's fairly overkill, to put it mildly, but it works: every time, everywhere.
 
 ## Project Description
 I created a process that outputs clear-sky satellite images of ANY location on the globe. The process is fully automated and can return a clear tile given a Setninel-2 cell. It even works for locations that are typically hard to process, like the tropics where there is almost year-round cloud cover. Read on to see examples and find out how I put this project together.
