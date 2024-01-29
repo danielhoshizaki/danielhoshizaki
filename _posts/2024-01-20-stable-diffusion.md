@@ -3,7 +3,7 @@ layout: post
 title:  "Stable Diffusion for Remote Sensing: Reality Check"
 name:  "Daniel Hoshizaki"
 image:
-  path: /assets/images/diffusion/river1.jpg
+  path: /assets/images/diffusion/sd-banner.jpg
   thumbnail: /assets/images/diffusion/river1.jpg
 categories: [Remote Sensing, Deep Learning]
 ---
