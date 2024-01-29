@@ -13,3 +13,12 @@ How useful are generative techniques like stable diffusion for remote sensing ap
 <p align="center">
   <img src="/assets/images/diffusion/river1.jpg" />
 </p>
+<p align="center">
+  <img src="/assets/images/diffusion/sd3.jpg" />
+</p>
+<p align="center">
+  <img src="/assets/images/diffusion/sd6.jpg" />
+</p>
+<p align="center">
+  <img src="/assets/images/diffusion/sd9.jpg" />
+</p>
