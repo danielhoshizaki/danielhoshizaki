@@ -6,7 +6,11 @@ image:
   path: /assets/images/portfolio/kyushu.png
   thumbnail: /assets/images/portfolio/kyushu.png
 categories: [Remote Sensing, Deep Learning]
+
+<!---
+Uncomment to pin post to top
 pin: true
+-->
 ---
 
 Given enough data and compute budget, there's a sure-fire way to remove all cloud cover from Sentinel-2 satellite imagery. By enough data, I mean a whopping 5 years worth of imagery. It's fairly overkill, to put it mildly, but it works: every time, everywhere.
