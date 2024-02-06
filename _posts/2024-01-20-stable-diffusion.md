@@ -12,32 +12,32 @@ Generative techniques like Stable Diffusion have been out for a while and are st
 
 ## Base Knowledge
 
-Interestingly, pretrained Stable Diffusion (SD) models have a built in understanding of satellite imagery. These models are pretrained on LAION-5B, which includes both [captioned arial and satellite imagery](https://arxiv.org/pdf/2309.15535.pdf). I asked SD1.5 and SDXL to create "satellite images of mountains," and this is what they produced:
+Interestingly, pretrained Stable Diffusion (SD) models have a built in understanding of satellite imagery. These models are pretrained on LAION-5B, which includes both [captioned arial and satellite imagery](https://arxiv.org/pdf/2309.15535.pdf). I asked baseline SD1.5 and SDXL models to create "satellite images of mountains," and this is what they produced:
 
 <p align="center">
-  <img src="/assets/images/diffusion/xl_beach.png" width="512" height="512"/>
+  <img src="/assets/images/diffusion/sd_baseline_mountain.jpg" width="512" height="512"/>
   <figcaption class="text-center">Baseline SD1.5</figcaption>
 </p>
 
 <p align="center" class="text-center">
-  <img src="/assets/images/diffusion/xl_beach.png" width="512" height="512"/>
+  <img src="/assets/images/diffusion/xl_baseline_mountain.png" width="512" height="512"/>
   <figcaption class="text-center">Baseline SDXL</figcaption>
 </p>
 
-Not too bad for models with no finetuning. I found SD1.5 to be fairly opinionated and using the influence of the other training images to increase the contrast and colors of generated satellite images. Being a bigger model, SDXL appears to have a better base knowledge of satellite images and doesn't force as much stylization as 1.5.
+Not too bad for models with no finetuning. I found SD1.5 to be fairly opinionated and using the influence of the other training images to increase the contrast and colors of generated satellite images. SD1.5 also tends to apply perspectives and features of normal mountain photography onto images that have the vantage point of a satellite. This makes for some fairly unnatural looking images. SDXL, on the other hand, has the advantage of being a bigger model and appears to have a better base knowledge of satellite images. XL doesn't force as much stylization or awkward perspectives as 1.5.
 
 ## Finetuning
 
 I wanted to see if finetuning these models on a remote sensing dataset would yield anything different or, hopefully, better. I took a similar approach as [this article](https://www.reasonfieldlab.com/post/generative-ai-and-remote-sensing-imagery) and used part of the AID dataset to finetune on a single class: satellite images of mountains. I stuck to LoRA finetuning since I only had a plebe graphics card with limited memory. As a result, I only saw small modifications to the model outputs, due to the limited amount of influence LoRAs are designed to exert on the base network. Here are the images generated using the same seed as the examples from above:
 
 <p align="center" class="text-center">
-  <img src="/assets/images/diffusion/xl_beach.png" width="512" height="512"/>
-  <figcaption>Finetuned SD1.5</figcaption>
+  <img src="/assets/images/diffusion/sd_finetune_mountain.jpg" width="512" height="512"/>
+  <figcaption class="text-center">Finetuned SD1.5</figcaption>
 </p>
 
 <p align="center" class="text-center">
-  <img src="/assets/images/diffusion/xl_beach.png" width="512" height="512"/>
-  <figcaption>Finetuned SDXL</figcaption>
+  <img src="/assets/images/diffusion/sxl_finetune_mountain.png" width="512" height="512"/>
+  <figcaption class="text-center">Finetuned SDXL</figcaption>
 </p>
 
 I'm not seeing a whole lot of difference from the baseline models. There may be hyperparmeter tweeks that would allow for larger LoRA influence, but I wasn't able to find them during my limited experiments. At this point, the capability of the models are largely determined by the original training dataset. Using a larger dataset and fully retraining the models would probably lead to the larger output changes I was initially hoping for.
@@ -58,5 +58,5 @@ I'm confident these models will get better in the future and I may even be prove
 </p>
 <p align="center" class="text-center">
   <img src="/assets/images/diffusion/sd9.jpg" />
-  <figcaption>The abstract art of manufactured landscapes</figcaption>
+  <figcaption class="text-center">The art of manufactured landscapes</figcaption>
 </p>
