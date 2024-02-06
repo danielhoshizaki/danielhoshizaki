@@ -14,14 +14,14 @@ Generative techniques like Stable Diffusion have been out for a while and are st
 
 Interestingly, pretrained Stable Diffusion (SD) models have a built in understanding of satellite imagery. These models are pretrained on LAION-5B, which includes both [captioned arial and satellite imagery](https://arxiv.org/pdf/2309.15535.pdf). I asked SD1.5 and SDXL to create "satellite images of mountains," and this is what they produced:
 
-<p align="center" class="text-center">
+<p align="center">
   <img src="/assets/images/diffusion/xl_beach.png" width="512" height="512"/>
-  <figcaption>Baseline SD1.5</figcaption>
+  <figcaption class="text-center">Baseline SD1.5</figcaption>
 </p>
 
 <p align="center" class="text-center">
   <img src="/assets/images/diffusion/xl_beach.png" width="512" height="512"/>
-  <figcaption>Baseline SDXL</figcaption>
+  <figcaption class="text-center">Baseline SDXL</figcaption>
 </p>
 
 Not too bad for models with no finetuning. I found SD1.5 to be fairly opinionated and using the influence of the other training images to increase the contrast and colors of generated satellite images. Being a bigger model, SDXL appears to have a better base knowledge of satellite images and doesn't force as much stylization as 1.5.
