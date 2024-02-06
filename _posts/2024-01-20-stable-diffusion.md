@@ -42,7 +42,7 @@ I wanted to see if finetuning these models on a remote sensing dataset would yie
 
 I'm not seeing a whole lot of difference from the baseline models. There may be hyperparmeter tweeks that would allow for larger LoRA influence, but I wasn't able to find them during my limited experiments. At this point, the capability of the models are largely determined by the original training dataset. Using a larger dataset and fully retraining the models would probably lead to the larger output changes I was initially hoping for.
 
-## Final Thoughts
+## Reality Check
 As I experimented with finetuning SD, I found myself wondering about the potential applications of generative models for the field of remote sensing. One thing that is immediately clear to me is that there is still a significant barrier to achieving reliable outputs that would serve a meaningful purpose in production environments. Synthetic data is only as good as training data used to create the generator model. To get really good results, a LOT of data is needed. I would argue that high quality labeled data is better used for directly training a model for a specific task or application, rather than using the data to train a generator. Even though the [outputs of SD variants can be impressive and realistic](https://arxiv.org/pdf/2312.03606.pdf), I still don't see what this generated imagery would be really used for. What am I going to do or make with more images of roads and stadiums?
 
 I'm confident these models will get better in the future and I may even be proven wrong that more images of roads are, in fact, better for training models. In the meantime, the effort used to train and customize these models is probably better used on curating high quality datasets for much smaller models that can accomplish a specific task reliably. Until the generative landscape makes another tectonic shift, I'll be using these models for what they are best at: making art.
@@ -60,3 +60,7 @@ I'm confident these models will get better in the future and I may even be prove
   <img src="/assets/images/diffusion/sd9.jpg" />
   <figcaption class="text-center">The art of manufactured landscapes</figcaption>
 </p>
+
+## Code
+
+I've created a repository with an example implementation of finetuning SD1.5 with LoRA. I rely heavily on [Huggingface's finetuning template](https://github.com/huggingface/diffusers/blob/main/examples/text_to_image/train_text_to_image_lora.py) and have modified the script to work with my RTX3060. The Dockerfile and Makefile should allow you to quickly get started with finetuning the model if you have the same card and the same CUDA drivers as those defined in the Dockerfile. The only other prerequisite is downloading the AID dataset and creating a custom jsonl file to point to the images and define the training captions.
