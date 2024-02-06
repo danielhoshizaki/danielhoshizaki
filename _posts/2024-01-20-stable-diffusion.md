@@ -36,7 +36,7 @@ I wanted to see if finetuning these models on a remote sensing dataset would yie
 </p>
 
 <p align="center" class="text-center">
-  <img src="/assets/images/diffusion/sxl_finetune_mountain.png" width="512" height="512"/>
+  <img src="/assets/images/diffusion/xl_finetune_mountain.png" width="512" height="512"/>
   <figcaption class="text-center">Finetuned SDXL</figcaption>
 </p>
 
