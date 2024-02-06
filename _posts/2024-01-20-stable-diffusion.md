@@ -15,9 +15,9 @@ Generative techniques like StableDiffusion have been out for a while and are sta
 Interestingly, pretrained StableDiffusion (SD) models have a built in understanding of satellite imagery. These models are pretrained on LAION-5B, which includes both [captioned arial and satellite imagery](https://arxiv.org/pdf/2309.15535.pdf). I asked SD1.5 and SDXL to create "satellite images of mountains," and this is what they produced:
 
 <p align="center">
-  <img src="/assets/images/diffusion/xl_beach.jpg" />
+  <img src="/assets/images/diffusion/xl_beach.png" />
   <figcaption>Baseline pretrained SD1.5</figcaption>
-  <img src="/assets/images/diffusion/xl_beach.jpg" />
+  <img src="/assets/images/diffusion/xl_beach.png" />
   <figcaption>Baseline pretrained SDXL</figcaption>
 </p>
 
@@ -28,9 +28,9 @@ Not too bad for models with no finetuning. I found SD1.5 to be fairly opinionate
 I wanted to see if finetuning these models on a remote sensing dataset would yield anything different or, hopefully, better. I took a similar approach as [this article](https://www.reasonfieldlab.com/post/generative-ai-and-remote-sensing-imagery) and used part of the AID dataset to finetune on a single class: satellite images of mountains. I stuck to LoRA finetuning since I only had a plebe graphics card with limited memory. As a result, I only saw small modifications to the model outputs, due to the limited amount of influence LoRAs are designed to exert on the base network. Here are the images generated using the same seed as the examples from above:
 
 <p align="center">
-  <img src="/assets/images/diffusion/xl_beach.jpg" />
+  <img src="/assets/images/diffusion/xl_beach.png" />
   <figcaption>Finetuned SD1.5</figcaption>
-  <img src="/assets/images/diffusion/xl_beach.jpg" />
+  <img src="/assets/images/diffusion/xl_beach.png" />
   <figcaption>Finetuned SDXL</figcaption>
 </p>
 
