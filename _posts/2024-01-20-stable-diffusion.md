@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Manufactured Landscapes"
+title:  "Stable Diffusion for Remote Sensing: Reality Check"
 name:  "Daniel Hoshizaki"
 image:
   path: /assets/images/diffusion/sd-banner_2.jpg
@@ -8,11 +8,11 @@ image:
 categories: [Remote Sensing, Deep Learning]
 ---
 
-Generative techniques like StableDiffusion have been out for a while and are starting to make their way into the field of remote sensing. I thought I'd give these models a try and see what the hype was all about. From my very brief experiments, I can say two things: one, I'm not entirely sold on the utility of generative models for real world applications; two, these models make interesting and abstract art that resembles remote sensing imagery. Until these models and their supporting ecosystem develop further to allow practical application development, I'm content toying with these models to generate interesting art pieces.
+Generative techniques like Stable Diffusion have been out for a while and are starting to make their way into the field of remote sensing. I thought I'd give these models a try and see what the hype was all about. From my very brief experiments, I can say two things: one, I'm not entirely sold on the utility of generative models for real world applications; two, these models make interesting and abstract art that resembles remote sensing imagery. Until these models and their supporting ecosystem develop further to allow practical application development, I'm content toying with these models to generate interesting art pieces.
 
 ## Base Knowledge
 
-Interestingly, pretrained StableDiffusion (SD) models have a built in understanding of satellite imagery. These models are pretrained on LAION-5B, which includes both [captioned arial and satellite imagery](https://arxiv.org/pdf/2309.15535.pdf). I asked SD1.5 and SDXL to create "satellite images of mountains," and this is what they produced:
+Interestingly, pretrained Stable Diffusion (SD) models have a built in understanding of satellite imagery. These models are pretrained on LAION-5B, which includes both [captioned arial and satellite imagery](https://arxiv.org/pdf/2309.15535.pdf). I asked SD1.5 and SDXL to create "satellite images of mountains," and this is what they produced:
 
 <p align="center">
   <img src="/assets/images/diffusion/xl_beach.png" width="512" height="512"/>
