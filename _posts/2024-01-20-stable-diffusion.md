@@ -56,7 +56,7 @@ I'm confident these models will get better in the future and I may even be prove
 <p align="center">
   <img src="/assets/images/diffusion/sd6.jpg" />
 </p>
-<p align="center">
+<p align="center" class="text-center">
   <img src="/assets/images/diffusion/sd9.jpg" />
   <figcaption>The abstract art of manufactured landscapes</figcaption>
 </p>
