@@ -14,17 +14,15 @@ Generative techniques like Stable Diffusion have been out for a while and are st
 
 Interestingly, pretrained Stable Diffusion (SD) models have a built in understanding of satellite imagery. These models are pretrained on LAION-5B, which includes both [captioned arial and satellite imagery](https://arxiv.org/pdf/2309.15535.pdf). I asked SD1.5 and SDXL to create "satellite images of mountains," and this is what they produced:
 
-<p align="center">
+<p align="center" class="text-center">
   <img src="/assets/images/diffusion/xl_beach.png" width="512" height="512"/>
+  <figcaption>Baseline SD1.5</figcaption>
 </p>
-<figcaption>Baseline SD1.5</figcaption>
-{: .text-center}
 
-<p align="center">
+<p align="center" class="text-center">
   <img src="/assets/images/diffusion/xl_beach.png" width="512" height="512"/>
+  <figcaption>Baseline SDXL</figcaption>
 </p>
-<figcaption>Baseline SDXL</figcaption>
-{: .text-center}
 
 Not too bad for models with no finetuning. I found SD1.5 to be fairly opinionated and using the influence of the other training images to increase the contrast and colors of generated satellite images. Being a bigger model, SDXL appears to have a better base knowledge of satellite images and doesn't force as much stylization as 1.5.
 
@@ -32,17 +30,15 @@ Not too bad for models with no finetuning. I found SD1.5 to be fairly opinionate
 
 I wanted to see if finetuning these models on a remote sensing dataset would yield anything different or, hopefully, better. I took a similar approach as [this article](https://www.reasonfieldlab.com/post/generative-ai-and-remote-sensing-imagery) and used part of the AID dataset to finetune on a single class: satellite images of mountains. I stuck to LoRA finetuning since I only had a plebe graphics card with limited memory. As a result, I only saw small modifications to the model outputs, due to the limited amount of influence LoRAs are designed to exert on the base network. Here are the images generated using the same seed as the examples from above:
 
-<p align="center">
+<p align="center" class="text-center">
   <img src="/assets/images/diffusion/xl_beach.png" width="512" height="512"/>
+  <figcaption>Finetuned SD1.5</figcaption>
 </p>
-<figcaption>Finetuned SD1.5</figcaption>
-{: .text-center}
 
-<p align="center">
+<p align="center" class="text-center">
   <img src="/assets/images/diffusion/xl_beach.png" width="512" height="512"/>
+  <figcaption>Finetuned SDXL</figcaption>
 </p>
-<figcaption>Finetuned SDXL</figcaption>
-{: .text-center}
 
 I'm not seeing a whole lot of difference from the baseline models. There may be hyperparmeter tweeks that would allow for larger LoRA influence, but I wasn't able to find them during my limited experiments. At this point, the capability of the models are largely determined by the original training dataset. Using a larger dataset and fully retraining the models would probably lead to the larger output changes I was initially hoping for.
 
