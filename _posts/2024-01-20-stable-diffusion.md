@@ -44,12 +44,13 @@ The XL model was much more receptive to the finetuning dataset. While the output
   <figcaption class="text-center">Finetuned SDXL</figcaption>
 </p>
 
-I didn't do a whole lot of hyperparameter tuning. It may very well be the case that the difference I saw in 1.5 and XL come down to differences in model and training hyperparameters. I'm also curious about how fully retraining either model on the complete AID dataset would compare to the examples I've posted here. Perhaps a follow up post is warranted. 
+## Thoughts
 
-## Reality Check
-In the meantime, I'll wrap up with a thought that stuck with me during this whole process: what is an actual use case for generative models in remote sensing? One thing that is immediately clear to me is that there is still a significant barrier to achieving reliable outputs that would serve a meaningful purpose in production environments. Synthetic data is only as good as training data used to create the generator model. To get really good results, a LOT of data is needed. I would argue that high quality labeled data is better used for directly training a model for a specific task or application, rather than using the data to train a generator. Even though the [outputs of SD variants can be impressive and realistic](https://arxiv.org/pdf/2312.03606.pdf), I still don't see what this generated imagery would be really used for. What am I going to do or make with more images of roads and stadiums?
+I didn't do a whole lot of hyperparameter tuning. It may very well be the case that the difference I saw in 1.5 and XL was due to differences in model and training hyperparameters. I'm also curious about how fully retraining either model on the complete AID dataset would compare to the examples I've posted here. Perhaps a follow up post is warranted. 
 
-I'm confident these models will get better in the future and I may even be proven wrong that more images of roads are, in fact, better for training models. In the meantime, the effort used to train and customize these models is probably better used on curating high quality datasets for much smaller models that can accomplish a specific task reliably. Until the generative landscape makes another tectonic shift, I'll be using these models for what they are best at: making art.
+In the meantime, I'll wrap up with a thought that stuck with me during this whole process: is there an actual use case for generative models in remote sensing? One thing that is immediately clear to me is that there is still a significant barrier to achieving reliable outputs that would serve a meaningful purpose in production environments. Synthetic data is only as good as the training data used to create the generator model. A LOT of data is needed to get really good results. I would argue that high quality labeled data is better used for training a non-generative model for a specific task or application. Even though the [outputs of SD variants can be impressive and realistic](https://arxiv.org/pdf/2312.03606.pdf), I still don't see what this generated imagery would be really used for remote sensing applications. What am I going to do or make with more images of roads or stadiums?
+
+I'm confident these models will get better in the future and I may even be proven wrong that more images of roads are, in fact, better for training down-stream models. In the meantime, the effort used to train and customize these models is probably better used on curating high quality datasets for much smaller models aimed at reliably tackling a specific task. Until the generative landscape makes another tectonic shift, I'll be using these models for what they do best: making art.
 
 <p align="center">
   <img src="/assets/images/diffusion/river1.jpg" />
@@ -62,7 +63,7 @@ I'm confident these models will get better in the future and I may even be prove
 </p>
 <p align="center" class="text-center">
   <img src="/assets/images/diffusion/sd9.jpg" />
-  <figcaption class="text-center">The art of manufactured landscapes</figcaption>
+  <figcaption class="text-center">The art of synthetic landscapes</figcaption>
 </p>
 
 ## Code
